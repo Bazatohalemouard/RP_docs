@@ -1,0 +1,221 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    padding: 20px;
+    color: #333;
+}
+
+/* HEADER & FOOTER */
+header, footer {
+    background: #1e3e2b;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+header p, footer p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+footer {
+    margin-top: 20px;
+}
+
+/* NAVIGATION */
+nav {
+    background: #2d5a3d;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 15px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+nav a:hover {
+    color: #f5c542;
+}
+
+/* SECTIONS */
+section {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #1e3e2b;
+    border-left: 4px solid #f5c542;
+    padding-left: 10px;
+    margin-bottom: 15px;
+}
+
+/* CARDS - using CSS Grid */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+}
+
+.card {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 4px solid #f5c542;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.card.hidden {
+    display: none;
+}
+
+/* FILTER BUTTONS */
+.filter-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background: #e0e0e0;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.filter-btn:hover {
+    background: #2d5a3d;
+    color: white;
+}
+
+.filter-btn.active {
+    background: #1e3e2b;
+    color: white;
+}
+
+/* TESTIMONIALS */
+blockquote {
+    background: #f9f9f9;
+    padding: 15px;
+    border-left: 4px solid #1e3e2b;
+    margin-bottom: 10px;
+}
+
+blockquote cite {
+    display: block;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+/* MAP */
+.map-placeholder {
+    background: #ddd;
+    padding: 40px;
+    text-align: center;
+    border-radius: 5px;
+    border: 2px dashed #1e3e2b;
+}
+
+/* FORM */
+form {
+    max-width: 500px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+input.error, textarea.error {
+    border-color: red;
+    background: #ffe6e6;
+}
+
+.error-msg {
+    color: red;
+    font-size: 0.85rem;
+    display: none;
+}
+
+.error-msg.visible {
+    display: block;
+}
+
+button[type="submit"] {
+    background: #1e3e2b;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+button[type="submit"]:hover {
+    background: #2d5a3d;
+}
+
+.form-success {
+    color: green;
+    background: #e6ffe6;
+    padding: 10px;
+    border-radius: 4px;
+    display: none;
+    margin-top: 10px;
+}
+
+.form-success.visible {
+    display: block;
+}
+
+/* RESPONSIVE - Mobile & Tablet */
+@media (max-width: 768px) {
+    body { padding: 10px; }
+    nav ul { gap: 10px; }
+    .card-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 480px) {
+    nav ul { flex-direction: column; align-items: center; }
+    .card-grid { grid-template-columns: 1fr; }
+}

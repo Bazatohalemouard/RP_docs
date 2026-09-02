@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AgriConnect Rwanda</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+    <!-- HEADER with Registration Number -->
+    <header>
+        <p>Reg. No: 25RP21810</p>
+        <h1>AgriConnect Rwanda</h1>
+        <p>Fresh from the Farm to Your Table</p>
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#farmers">Farmers</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#map">Map</a></li>
+        </ul>
+    </nav>
+
+    <!-- HOMEPAGE -->
+    <section id="home">
+        <h2>Welcome to AgriConnect Rwanda</h2>
+        <p>We connect local farmers directly with consumers in Kigali and beyond.</p>
+        <p>No middlemen. Just fresh, organic produce.</p>
+    </section>
+
+    <!-- FARMERS SHOWCASE -->
+    <section id="farmers">
+        <h2>Our Featured Farmers</h2>
+        <div class="card-grid">
+            <div class="card">
+                <h3>The Veggie Collective</h3>
+                <p>Tomatoes, onions, and leafy greens.</p>
+            </div>
+            <div class="card">
+                <h3>Rwamagana Dairy Hub</h3>
+                <p>Fresh milk and traditional ghee.</p>
+            </div>
+            <div class="card">
+                <h3>Bugesera Fruit Growers</h3>
+                <p>Mangoes, passion fruits, and pineapples.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCT LISTINGS -->
+    <section id="products">
+        <h2>Our Products</h2>
+        
+        <!-- Filter Buttons -->
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="vegetables">Vegetables</button>
+            <button class="filter-btn" data-filter="fruits">Fruits</button>
+            <button class="filter-btn" data-filter="dairy">Dairy</button>
+        </div>
+
+        <div class="card-grid" id="productGrid">
+            <div class="card" data-category="vegetables">
+                <h3>Fresh Cabbages</h3>
+                <p>RWF 500 each</p>
+            </div>
+            <div class="card" data-category="vegetables">
+                <h3>Organic Carrots</h3>
+                <p>RWF 300 per bunch</p>
+            </div>
+            <div class="card" data-category="vegetables">
+                <h3>Lettuce</h3>
+                <p>RWF 400 per head</p>
+            </div>
+            <div class="card" data-category="fruits">
+                <h3>Mangoes</h3>
+                <p>RWF 600 each</p>
+            </div>
+            <div class="card" data-category="fruits">
+                <h3>Avocados</h3>
+                <p>RWF 400 each</p>
+            </div>
+            <div class="card" data-category="fruits">
+                <h3>Bananas</h3>
+                <p>RWF 200 per bunch</p>
+            </div>
+            <div class="card" data-category="dairy">
+                <h3>Fresh Milk</h3>
+                <p>RWF 1,200 per litre</p>
+            </div>
+            <div class="card" data-category="dairy">
+                <h3>Yogurt</h3>
+                <p>RWF 800 per cup</p>
+            </div>
+            <div class="card" data-category="dairy">
+                <h3>Cheese</h3>
+                <p>RWF 2,500 per block</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials">
+        <h2>What Our Customers Say</h2>
+        <blockquote>
+            <p>"I love ordering fresh vegetables for my restaurant. The quality is unmatched."</p>
+            <cite>— Jean-Pierre, Kigali</cite>
+        </blockquote>
+        <blockquote>
+            <p>"This platform helped our cooperative reach more customers easily."</p>
+            <cite>— Marie, The Veggie Collective</cite>
+        </blockquote>
+    </section>
+
+    <!-- STATIC MAP -->
+    <section id="map">
+        <h2>Find Our Farms</h2>
+        <p>We work with farmers in Bugesera, Nyagatare, and Rwamagana.</p>
+        <div class="map-placeholder">
+            [MAP] Bugesera | Nyagatare | Rwamagana
+        </div>
+    </section>
+
+    <!-- CONTACT FORM -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <label for="name">Name *</label>
+            <input type="text" id="name" required />
+            <span class="error-msg" id="nameError">Please enter your name</span>
+
+            <label for="email">Email *</label>
+            <input type="email" id="email" required />
+            <span class="error-msg" id="emailError">Please enter a valid email</span>
+
+            <label for="phone">Phone *</label>
+            <input type="tel" id="phone" required />
+            <span class="error-msg" id="phoneError">Please enter a valid phone number</span>
+
+            <label for="message">Message</label>
+            <textarea id="message" rows="4"></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+        <div class="form-success" id="formSuccess">Message sent successfully!</div>
+    </section>
+
+    <!-- FOOTER with Registration Number -->
+    <footer>
+        <p>Reg. No: 25RP21810</p>
+        <p>&copy; 2026 AgriConnect Rwanda</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
